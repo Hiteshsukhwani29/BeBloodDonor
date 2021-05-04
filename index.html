@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Be_Blood_Donor</title>
-    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
     <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" id="et-core-unified-tb-136-6-cached-inline-styles" href="http://blooddonate.in/wp-content/et-cache/6/et-core-unified-tb-136-6-16189736241182.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)">
-    <link rel="stylesheet" id="et-core-unified-tb-136-6-cached-inline-styles" href="http://blooddonate.in/wp-content/et-cache/6/et-core-unified-tb-136-6-16189736241182.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)">
-<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  
 <style type="text/css">
   * {
   max-width: 100%;
@@ -26,6 +27,23 @@
   }
 }
 </style>
+
+ <script>
+  // Your web app's Firebase configuration 
+  var firebaseConfig = {
+     apiKey: "AIzaSyCK962kbgD3zW6QDi6wrR_APXPKWXx_djc",
+    authDomain: "be-blood-donor.firebaseapp.com",
+    databaseURL: "https://be-blood-donor-default-rtdb.firebaseio.com/",
+    projectId: "be-blood-donor",
+    storageBucket: "be-blood-donor.appspot.com",
+    messagingSenderId: "593603179460",
+    appId: "1:593603179460:web:06c9a96e32992d26862a91",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+
+</script>
 </head>
 
 <body>
@@ -35,7 +53,7 @@
                 <div class="container">
                     <div class="row nav-row">
                         <div class="col-md-3 logo">
-                            <img src="assets/images/logo.jpg" alt="">
+                            <a href="index.html"><img src="assets/images/logo.jpg" alt=""></a>
                         </div>
                         <div class="col-md-9 nav-col">
                             <nav class="navbar navbar-expand-lg navbar-light">
@@ -66,7 +84,7 @@
                                             <a class="nav-link" href="#volunteer">Volunteer</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#blog">Blog</a>
+                                            <a class="nav-link" href="#blog">Headlines</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#contact">Contact US</a>
@@ -161,23 +179,24 @@
                <h2 style="color: #DC7633 ; font-size: 20px;">What this means to you</h2>
                <p style="font-size: 16px;">Dedicated to quality, Integrity, Services and Excellence in Everything we do, Be Blood Donor works to ensure reliable and streamlined access to a stable supply of safe blood and related products whenever they are needed.</p>
            </div>
+           <center>
             <div class="row">
-                <div class="col-md-4 offset-md-2 text">
-                     <h2 style="color: #DC7633; font-size: 50px;">Who Are We?</h2>
+                <div class="col-md-4 offset-md-2 ">
                     <h2 style="color: #DC7633; font-size: 50px;">About us</h2>
                     <p style="font-size: 16px;">The ingenuity of the Be Blood 🩸 Donor-Blood donors network is that it simply requires a volunteer to register on www.BeBloodDonor.in and submit their details. Be blood donor does not collect or store blood. Blood being a highly perishable, we insist that it should be stored in the best vessel- The Human body !Through this digital platform, we urge you to fulfill your supreme duty as a human being; to save a life, by becoming a proud registered volunteer.</p>
                 </div>
                 <div class="col-md-4 image">
-                    <img src="assets/images/about.jpg" alt="">
+                    <img src="assets/images/about.gif" alt="">
                 </div>
             </div>
+            </center>
        </div>
    </section>
     
           
     
       <!-- ################# Gallery Start Here #######################--->
-     
+     <center>
     <div id="gallery" class="gallery container-fluid">
         <div class="container">
             <div class="row session-title">
@@ -222,7 +241,7 @@
             </div>
         </div>
     </div>
-    
+    </center>
     
     
      
@@ -270,7 +289,7 @@
      
     <center>
 <br><br>
-      <div class="card" style="width: 18rem;background-color: #d1b866;padding: 20px;box-shadow: 2px 2px 4px grey;">
+      <div class="card" style="width: 18rem;background-color: #fffff4; color:#d1b866;padding: 20px;box-shadow: 2px 2px 4px grey;">
         <div class="card-title text-center"><h4>Lives We have Touched</h4></div>
         <div class="card-body">
            <p class="card-text" id="count1"><p>
@@ -304,7 +323,7 @@
         <div id="blog" class="blog-container contaienr-fluid">
             <div class="container">
                 <div class="session-title row">
-                  <h2>Latest Blog</h2>
+                  <h2>Headlines</h2>
                 </div>
                 <div class="row news-row">
                     <div class="col-md-6">
@@ -313,13 +332,9 @@
                                 <img src="assets/images/blog/blog_01.jpg" alt="">
                             </div>
                             <div class="detail">
-                                <h3>Latest News about Smarteye</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit consectetur adipiscing elit. </p>
-                                <p class="footp">
-                                    27 Comments <span>/</span>
-                                    Blog Design <span>/</span>
-                                    Read More
-                                </p>
+                                <h3>Coming Soon...</h3>
+                                <p>Coming Soon...</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -329,13 +344,9 @@
                                 <img src="assets/images/blog/blog_02.jpg" alt="">
                             </div>
                             <div class="detail">
-                                <h3>Apple Launch its New Phone</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit consectetur adipiscing elit. </p>
-                                <p class="footp">
-                                    27 Comments <span>/</span>
-                                    Blog Design <span>/</span>
-                                    Read More
-                                </p>
+                                <h3>Coming Soon...</h3>
+                                <p>Coming Soon...</p>
+                              
                             </div>
                         </div>
                     </div>
@@ -345,13 +356,9 @@
                                 <img src="assets/images/blog/blog_03.jpg" alt="">
                             </div>
                             <div class="detail">
-                                <h3>About Windows 10 Update</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit consectetur adipiscing elit. </p>
-                                <p class="footp">
-                                    27 Comments <span>/</span>
-                                    Blog Design <span>/</span>
-                                    Read More
-                                </p>
+                                <h3>Coming Soon...</h3>
+                                <p>Coming Soon... </p>
+                                
                             </div>
                         </div>
                     </div>
@@ -361,13 +368,9 @@
                                 <img src="assets/images/blog/blog_04.jpg" alt="">
                             </div>
                             <div class="detail">
-                                <h3>Latest News about Smarteye</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit consectetur adipiscing elit. </p>
-                                <p class="footp">
-                                    27 Comments <span>/</span>
-                                    Blog Design <span>/</span>
-                                    Read More
-                                </p>
+                                <h3>Coming Soon...</h3>
+                                <p>Coming Soon... </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -387,18 +390,10 @@
                     <h2>Contact Informatins</h2>
                     <div class="address-row">
                         <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="detail">
-                            <p>Tirthani Plastic & Crockery,<br>Fawara Chowk,Burhanpur(M.P.)</p>
-                        </div>
-                    </div>
-                    <div class="address-row">
-                        <div class="icon">
                             <i class="far fa-envelope"></i>
                         </div>
                         <div class="detail">
-                            <p>Beblooddonor.in@gmail.com <br> Yashtirthani01@gmail.com</p>
+                            <p>Beblooddonor.in@gmail.com</p>
                         </div>
                     </div>
                     <div class="address-row">
@@ -411,42 +406,25 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 footer-links">
-                   <div class="row no-margin mt-2">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Contacts</li>
-                        <li>Pricing</li>
-                        <li>Gallery</li>
-                        <li>eatures</li>
-
-                    </ul>
-                    </div>
                    <div class="row no-margin mt-1">
-                       <h2 class="m-t-2">More Products</h2>
-                     <ul>
-                        <li>Forum PHP Script</li>
-                        <li>Edu Smart</li>
-                        <li>Smart Event</li>
-                        <li>Smart School</li>
 
-
-                    </ul>
                    </div>
+                  </div>
 
-                </div>
                 <div class="col-lg-4 col-md-12 footer-form">
                     <div class="form-card">
                         <div class="form-title">
                             <h4>Quick Message</h4>
                         </div>
                         <div class="form-body">
-                            <input type="text" placeholder="Enter Name" class="form-control">
-                            <input type="text" placeholder="Enter Mobile no" class="form-control">
-                            <input type="text" placeholder="Enter Email Address" class="form-control">
-                            <input type="text" placeholder="Your Message" class="form-control">
-                            <button class="btn btn-sm btn-primary w-100">Send Request</button>
+                          <form class=" contactForm">
+                            <input type="text" placeholder="Enter Name" class="form-control mpage_name">
+                            <input type="text" placeholder="Enter Mobile no" class="form-control mpage_mobile">
+                            <input type="text" placeholder="Enter Email Address" class="form-control mpage_email">
+                            <input type="text" placeholder="Your Message" class="form-control mpage_message">
+                            <button class="btn btn-sm btn-primary w-100" type="submit">Send</button>
+                            <h3 class="success-message">Message Sended</h3>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -470,11 +448,19 @@
         </div>
     </footer>
 </body>
+ 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="js/main.js"></script>
 </html>

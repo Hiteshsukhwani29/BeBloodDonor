@@ -8,8 +8,9 @@ var config = {
     appId: "1:593603179460:web:06c9a96e32992d26862a91",
 };
 firebase.initializeApp(config);
+var messagesRef1 = firebase.database().ref('query');
 var messagesRef = firebase.database().ref('user');
-$('#contactForm').submit(function(e) {
+$('#donateForm').submit(function(e) {
     e.preventDefault();
  
     var newMessageRef = messagesRef.push();
@@ -31,5 +32,19 @@ $('#contactForm').submit(function(e) {
  
     $('.success-message').show();
   $('#main').hide();
+    $('#donateForm')[0].reset();
+});
+$('#contactForm').submit(function(e) {
+    e.preventDefault();
+ 
+    var newMessageRef1 = messagesRef1.push();
+    newMessageRef.set({
+        name: $('.mpage_name').val(),
+        phone: $('.mpage_mobile').val(),
+        email: $('.mpage_email').val(),
+        message: $('.mpage_message').val()
+    });
+ 
+    $('.success-message').show();
     $('#contactForm')[0].reset();
 });

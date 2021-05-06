@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Be Blood Donor</title>
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -16,6 +16,9 @@
     
   <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
   
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
 <style type="text/css">
   * {
   max-width: 100%;
@@ -25,6 +28,22 @@
     display: none;
     max-height: 0;
     overflow: hidden;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #rm {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #rm {
+    font-size: 14px;
+  }
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  #rm {
+    font-size: 10px;
   }
 }
 </style>
@@ -42,13 +61,28 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  
+   var database = firebase.database();
+      database.ref('Blog').once('value', function(snapshot) {
+        if (snapshot.exists()) {
+          var content = '';
+          snapshot.forEach(function(data) {
+            var val = data.val();
+             length=snapshot.numChildren()
+            var title=val.title;
+            var readmore=val.readmore;
+            var image=val.image;
+            var sno=val.sno;
+content+=' <div class="col-sm-12 col-md-6"><a href="blog.html?'+sno+'"><div class="card" style="margin-top:10px;"><img class="card-img" src="assets/images/blog/blog_02.jpg" style=";height:100%;width:30%;"><p id="rm" style="position: absolute;left: 35%; width: 55%;font-weight: bolder;top:10%;bottom:10%;">'+readmore+'</p></div></div>'
+ });
+$('#news').append(content);
+        }
 
+      });
 </script>
 </head>
 
 <body>
-        <header class="continer-fluid ">
+        <header class="continer-fluid " >
             
             <div id="menu-jk" class="header-bottom">
                 <div class="container">
@@ -319,38 +353,36 @@
 
          </script>
      
-     
+     <style type="text/css">
+       .no-gutters {
+    margin-right: 0 !important;
+    /* margin-left: 0; */
+}
+     </style>
          <!--################### Our Blog Starts Here #######################--->
         <div id="blog" class="blog-container contaienr-fluid">
             <div class="container">
                 <div class="session-title row">
                   <h2>Headlines</h2>
                 </div>
-                <div class="row news-row">
-                    <div class="col-md-6">
-                        <div class="news-card">
-                            <div class="image">
-                                <img src="assets/images/blog/blog_01.jpg" alt="">
-                            </div>
-                            <div class="detail">
-                                <h3>Coming Soon...</h3>
-                                <p>Coming Soon...</p>
-                                
-                            </div>
-                        </div>
+                <div class="row" id="news">
+
+                   <!--
+                 <div class=" col-md-6" >
+                    <div class="card">
+            <div class="row text-left" style="width: 100%">
+                <div class="col-sm-5">
+                    <img class="card-img" src="assets/images/blog/blog_02.jpg" alt="Suresh Dasari Card">
+                </div> 
+                <div class="col-sm-7 ">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 14px;">Suresh Dasari</h5>
+                        <p class="card-text" style="font-size: 12px;">Suresh Dasari is a founder and technical lead developer in tutlane.</p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="news-card">
-                            <div class="image">
-                                <img src="assets/images/blog/blog_02.jpg" alt="">
-                            </div>
-                            <div class="detail">
-                                <h3>Coming Soon...</h3>
-                                <p>Coming Soon...</p>
-                              
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
                     <div class="col-md-6">
                         <div class="news-card">
                             <div class="image">
@@ -375,6 +407,7 @@
                             </div>
                         </div>
                     </div>
+                -->
                 </div>
             </div>
         </div>

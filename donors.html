@@ -126,7 +126,7 @@
     </div>
 
     <div id="requirements" class="container card" style=" padding-top: 30px;padding-bottom: 10px;width: 80%;
-  background-color: #3f0d12;background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%); margin-top: 60px;margin-bottom: 30px;
+  background-color: #3f0d12;background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%); margin-top: 60px;
 ">
  <div class="card-title" style="text-align: center;color: #ffffff;font-family: arial black;">Fill Your Requirements</div>
     <form class="form-row" >
@@ -182,6 +182,9 @@
                      <h6 id="showingbg"></h6>
                    </div>
                  </div>
+                     <br>
+                   <div id="report"class="col-sm-8" style="display:none;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSckUf0wsktqrEQBk7sD3wIcKKgv0HRSa0AUgrBO3o_Zm1L4Wg/viewform?usp=sf_link"><p  style="color: grey;"><img src="assets/images/report.png" width="28px" height="28px"> Report User</p></a></div><br>
+                   <br>
                    </center>
                 
                                <div class="row" id="cards" style="margin-top: 40px;">
@@ -241,6 +244,7 @@ console.log(bg);
         document.getElementById("showingbg").innerHTML="Blood Group : "+c;
         document.getElementById("requirements").style.display="none";
         document.getElementById("cards").style.display="block";
+         document.getElementById("report").style.display="block";
         document.getElementById("showingfor").style.display="flex";
         
         var i=0;

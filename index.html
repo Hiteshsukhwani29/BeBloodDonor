@@ -82,6 +82,12 @@ $('#news').append(content);
         }
 
       });
+      var navMain = $(".navbar-collapse");
+
+     navMain.on("click", "a", null, function () {
+         navMain.collapse('hide');
+     });
+ });
 </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DR5MF4VN8T"></script>

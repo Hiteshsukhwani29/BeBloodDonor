@@ -10,9 +10,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
     <script>
-$(".item").each(function () {
-    $(this).toggleClass('no-active', Math.random() < 0.5);
-});
+var number = Math.floor(Math.random()*3)
+var div = $(".item")[number];
+div.show();
       // Initialize Firebase
       var config = {  
         apiKey: "AIzaSyCK962kbgD3zW6QDi6wrR_APXPKWXx_djc",
@@ -25,9 +25,7 @@ $(".item").each(function () {
       };
       firebase.initializeApp(config);
     </script>
-<style>
-.no-active { visibility: hidden }
-</style>
+
   </head>
 
   <body>

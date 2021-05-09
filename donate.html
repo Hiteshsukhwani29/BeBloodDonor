@@ -180,12 +180,12 @@
 
                       <div class="card success-message" style="display:none;">
                         <div class="card-header">
-                          Be_Blood_Donor
+                          Donor Registered
                            </div>
                      <div class="card-body">
-                                <h5 class="card-title">Donor Registered</h5>
-                    <p class="card-text">Thank You For Joining With Us In This Blood Donation Drive</p>
-                   <a href="index.html" class="btn btn-primary">Close</a>
+                                <h5 class="card-title">Thank You For Joining With Us In This Blood Donation Drive</h5>
+                    <br>
+                   <a href="index.html" class="btn btn-outline-success">Close</a>
                    </div>
                    </div>
     
@@ -218,10 +218,10 @@
                     <div class="form-group col-sm-6">
                        <label for="inputState">Gender</label>
                         <select id="inputState" class="form-control gender" required>
-                            <option disabled selected>Choose Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
+                            <option disabled selected value="">Choose Gender</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Other</option>
                         </select>
                     </div>
             </div>
@@ -229,17 +229,17 @@
                     <div class="form-group col-sm-6">
                           <label for="inputState">District</label>
                           <select id="inputState" class="form-control district" required>
-                            <option selected>Burhanpur</option>
+                            <option selected value="1">Burhanpur</option>
                           </select>
                     </div>
                     <div class="form-group col-sm-6">
                         <label for="inputState">Area</label>
                         <select id="inputState" class="form-control area" required>
-                            <option disabled selected>Choose Area</option>
-                            <option>Burhanpur</option>
-                            <option>Nepanagar</option>
-                            <option>Shahpur</option>
-                            <option>Khaknar</option>
+                            <option disabled selected value="">Choose Area</option>
+                            <option value="1">Burhanpur</option>
+                            <option value="2">Nepanagar</option>
+                            <option value="3">Shahpur</option>
+                            <option value="4">Khaknar</option>
                             
                         </select>
                     </div>
@@ -258,15 +258,15 @@
                     <div class="form-group col-sm-6">
                       <label for="inputState">Blood Group</label>
                         <select id="inputState" class="form-control bg" required>
-                            <option disabled selected>Choose Blood Group</option>
-                            <option>A +ve</option>
-                            <option>A -ve</option>
-                            <option>B +ve</option>
-                            <option>B -ve</option>
-                            <option>O +ve</option>
-                            <option>O -ve</option>
-                            <option>AB +ve</option>
-                            <option>AB -ve</option>
+                            <option disabled selected value="">Choose Blood Group</option>
+                            <option value="1">A +ve</option>
+                            <option value="2">A -ve</option>
+                            <option value="3">B +ve</option>
+                            <option value="4">B -ve</option>
+                            <option value="5">O +ve</option>
+                            <option value="6">O -ve</option>
+                            <option value="7">AB +ve</option>
+                            <option value="8">AB -ve</option>
                             
                         </select>
                     </div>
@@ -275,18 +275,18 @@
                 <div class="form-group col-sm-6">
                     <label for="inputState">Have You Suffered From Covid-19?</label>
                      <select id="inputState" class="form-control covid" required>
-                         <option disabled selected>...</option>
-                        <option>No</option>
-                        <option>Yes</option>
+                         <option disabled selected value="">...</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
                     </select>
                 </div>
 
                 <div class="form-group col-sm-6">
                     <label for="inputState">Do You Consume Alcohol?</label>
                      <select id="inputState" class="form-control alcohol" required>
-                         <option disabled selected>...</option>
-                        <option>No</option>
-                        <option>Yes</option>
+                         <option disabled selected value="">...</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
                     </select>
                 </div>
             </div>
@@ -296,24 +296,29 @@
                     <label for="inputState">Will You Donate Plasma?</label>
                         <select id="inputstate" class="form-control plasma" required>
                             <option disabled selected value="">...</option>
-                            <option value="1">No</option>
-                            <option value="2">Yes</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
                         </select>
                 </div>
 
                 <div class="form-group col-sm-6">
                     <label for="inputState">From where you get to know about this campaign ?</label>
                         <select id="inputstate" class="form-control Donate" required>
-                            <option disabled selected>...</option>
-                            <option>Media</option>
-                            <option>Friend/Relatives</option>
-                            <option>Social Media</option>
+                            <option disabled selected value="">...</option>
+                            <option value="1">Media</option>
+                            <option value="2">Friend/Relatives</option>
+                            <option value="3">Social Media</option>
+                            <option value="4">Other</option>
                         </select>
                 </div>
             </div>
             <div class="form-group form-check">
                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-               <label class="form-check-label" for="exampleCheck1">I Have Read Eligibility Criteria</label>
+               <label class="form-check-label" for="exampleCheck1">I have read Eligibility Criteria</label>
+            </div>
+            <div class="form-group form-check">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+               <label class="form-check-label" for="exampleCheck1">I have read <a href=""><ul>Terms and Conditions</ul></a></label>
             </div>
             <button type="submit" class="btn btn-danger" id="btnsub">Submit</button>
         </form>

@@ -10,8 +10,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
     <script>
-var random = Math.floor(Math.random() * jQuery('.item').length);
-jQuery('.item').hide().eq(random).show
+var cards = $(".item");
+for(var i = 0; i < cards.length; i++){
+    var target = Math.floor(Math.random() * cards.length -1) + 1;
+    var target2 = Math.floor(Math.random() * cards.length -1) +1;
+    cards.eq(target).before(cards.eq(target2));
+}
       // Initialize Firebase
       var config = {  
         apiKey: "AIzaSyCK962kbgD3zW6QDi6wrR_APXPKWXx_djc",

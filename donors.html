@@ -10,9 +10,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
     <script>
-var number = Math.floor(Math.random()*3)
-var div = $(".item")[number];
-div.show();
+var random = Math.floor(Math.random() * jQuery('.item').length);
+jQuery('.item').hide().eq(random).show
       // Initialize Firebase
       var config = {  
         apiKey: "AIzaSyCK962kbgD3zW6QDi6wrR_APXPKWXx_djc",

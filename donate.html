@@ -201,23 +201,25 @@
         <form id="donateForm">
             <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <label for="exampleFullName">Full Name</label>
-                        <input type="text" class="form-control fullname" id="exampleFullName" placeholder="Enter Full Name" required>
+                        <label for="validationDefault01">Full Name</label>
+                        <input type="text" class="form-control fullname" id="validationDefault01" placeholder="Enter Full Name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <label for="examplePhone">Mobile Number</label>
-                        <input type="Number" class="form-control phone" id="examplephone" placeholder="Enter Phone No." required>
+                        <label for="validationDefault02">Mobile Number</label>
+                        <input type="Number" class="form-control phone" id="mobile" placeholder="Enter Phone No." required>
+                        <div class="alert alert-danger" id="mblalert" style="display:none;">Invalid Mobile Number</div>
                     </div>
             </div>
             <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <label for="exampleFullName">Email Address</label>
-                        <input type="Email" class="form-control email" id="exampleFullName" placeholder="Enter Email Address (if you have)">
+                        <label for="validationDefault03">Email Address</label>
+                        <input type="Email" class="form-control email" id="validationDefault03" placeholder="Enter Email Address (if you have)">
                     </div>
                     <div class="form-group col-sm-6">
                        <label for="inputState">Gender</label>
                         <select id="inputState" class="form-control gender" required>
-                            <option selected>Male</option>
+                            <option disabled selected>Choose Gender</option>
+                            <option>Male</option>
                             <option>Female</option>
                             <option>Other</option>
                         </select>
@@ -233,7 +235,8 @@
                     <div class="form-group col-sm-6">
                         <label for="inputState">Area</label>
                         <select id="inputState" class="form-control area" required>
-                            <option selected>Burhanpur</option>
+                            <option disabled selected>Choose Area</option>
+                            <option>Burhanpur</option>
                             <option>Nepanagar</option>
                             <option>Shahpur</option>
                             <option>Khaknar</option>
@@ -242,19 +245,20 @@
                     </div>
             </div>
             <div class="form-group">
-                        <label for="exampleFullName">Address</label>
-                        <input type="text" class="form-control address" id="exampleFullName" placeholder="Enter Full Address" required>
+                        <label for="validationDefault04">Address</label>
+                        <input type="text" class="form-control address" id="validationDefault04" placeholder="Enter Full Address" required>
             </div>
 
              <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <label for="exampleFullName">Age</label>
+                        <label for="validationDefault05">Age</label>
                         <input type="Number" class="form-control age" id="age" placeholder="Enter Age" required>
                         <div class="alert alert-danger" id="agealert" style="display:none;">Minimum Age for Blood Donation Is 18 </div>
                     </div>
                     <div class="form-group col-sm-6">
                       <label for="inputState">Blood Group</label>
-                        <select id="inputState" class="form-control bg">
+                        <select id="inputState" class="form-control bg" required>
+                            <option disabled selected>Choose Blood Group</option>
                             <option>A +ve</option>
                             <option>A -ve</option>
                             <option>B +ve</option>
@@ -270,7 +274,8 @@
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="inputState">Have You Suffered From Covid-19?</label>
-                     <select id="inputState" class="form-control covid">
+                     <select id="inputState" class="form-control covid" required>
+                         <option disabled selected>...</option>
                         <option>No</option>
                         <option>Yes</option>
                     </select>
@@ -278,7 +283,8 @@
 
                 <div class="form-group col-sm-6">
                     <label for="inputState">Do You Consume Alcohol?</label>
-                     <select id="inputState" class="form-control alcohol">
+                     <select id="inputState" class="form-control alcohol" required>
+                         <option disabled selected>...</option>
                         <option>No</option>
                         <option>Yes</option>
                     </select>
@@ -288,31 +294,61 @@
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="inputState">Will You Donate Plasma?</label>
-                        <select id="inputstate" class="form-control plasma">
+                        <select id="inputstate" class="form-control plasma" required>
+                            <option disabled selected>Choose Gender</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                 </div>
 
                 <div class="form-group col-sm-6">
-                    <label for="inputState">Have You Vaccinated?</label>
-                        <select id="inputstate" class="form-control Donate">
-                            <option>Yes</option>
-                            <option>No</option>
+                    <label for="inputState">From where you get to know about this campaign ?</label>
+                        <select id="inputstate" class="form-control Donate" required>
+                            <option disabled selected>...</option>
+                            <option>Media</option>
+                            <option>Friend/Relatives</option>
+                            <option>Social Media</option>
                         </select>
                 </div>
             </div>
             <div class="form-group form-check">
-               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                <label class="form-check-label" for="exampleCheck1">I Have Read Eligibility Criteria</label>
             </div>
-            <button type="submit" class="btn btn-danger">Submit</button>
+            <button type="submit" class="btn btn-danger" id="btnsub">Submit</button>
         </form>
     </div>
 </div>
 </div>
 </div>
-            
+    <script type="text/javascript">
+  setInterval(function() {
+    var p=document.getElementById("age").value;
+    var s=document.getElementById("mobile").value.length;
+      console.log(p)
+      if(p>=18){
+       document.getElementById("agealert").style.display="none"; 
+      }
+if(p >=18&&s==10){
+  document.getElementById("btnsub").disabled=false;
+  document.getElementById("agealert").style.display="none";
+
+}
+if(p<18){
+  document.getElementById("btnsub").disabled=true;
+  document.getElementById("agealert").style.display="block";
+}
+if(s>0&&s<10){
+  document.getElementById("mblalert").style.display="block";
+}
+if(s==10||s==0){
+  document.getElementById("mblalert").style.display="none";
+}
+if(s!=10){
+  document.getElementById("btnsub").disabled=true;}
+}, 60 * 5);
+     
+ </script>         
 </body>
  
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>

@@ -81,7 +81,13 @@ $('#news').append(content);
         }
 
       });
-      
+       $(function(){ 
+     var navMain = $(".navbar-collapse");
+
+     navMain.on("click", null, function () {
+         navMain.collapse('hide');
+     });
+ });
 </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DR5MF4VN8T"></script>
@@ -91,12 +97,8 @@ $('#news').append(content);
   gtag('js', new Date());
 
   gtag('config', 'G-DR5MF4VN8T');
-    var navMain = $(".navbar-collapse");
-
-     navMain.on("click","a", null, function () {
-         navMain.collapse('hide');
-     });
- });
+   
+    
 </script>
 </head>
 

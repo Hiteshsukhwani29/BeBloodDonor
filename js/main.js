@@ -38,13 +38,13 @@ $('#donateForm').submit(function(e) {
         district: $('.district').val(),
         area: $('.area').val(),
         address: $('.address').val(),
-        age: $('.age').val(),
+        //age: $('.age').val(),
         bg: $('.bg').val(),
-        covid: $('.covid').val(),
-        alcohol: $('.alcohol').val(),
+        //covid: $('.covid').val(),
+        //alcohol: $('.alcohol').val(),
         plasma: $('.plasma').val(),
-        donate: $('.Donate').val(),
-        gender: $('.gender').val()
+        //donate: $('.Donate').val(),
+        //gender: $('.gender').val()
     });
  
     $('.success-message').show();

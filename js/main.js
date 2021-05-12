@@ -16,21 +16,7 @@ $('#donateForm').submit(function(e) {
  
     var newMessageRef = messagesRef.push();
     var newMessageRef2 = messagesRef2.push();
-   newMessageRef2.set({
-       name: $('.fullname').val(),
-        phone: $('.phone').val(),
-        email: $('.email').val(),
-        district: $('.district').val(),
-        area: $('.area').val(),
-        address: $('.address').val(),
-        age: $('.age').val(),
-        bg: $('.bg').val(),
-        covid: $('.covid').val(),
-        alcohol: $('.alcohol').val(),
-        plasma: $('.plasma').val(),
-        donate: $('.Donate').val(),
-        gender: $('.gender').val()
-    });
+
     newMessageRef.set({
        name: $('.fullname').val(),
         phone: $('.phone').val(),
@@ -38,13 +24,11 @@ $('#donateForm').submit(function(e) {
         district: $('.district').val(),
         area: $('.area').val(),
         address: $('.address').val(),
-        //age: $('.age').val(),
+       
         bg: $('.bg').val(),
-        //covid: $('.covid').val(),
-        //alcohol: $('.alcohol').val(),
+      
         plasma: $('.plasma').val(),
-        //donate: $('.Donate').val(),
-        //gender: $('.gender').val()
+       
     });
  
     $('.success-message').show();

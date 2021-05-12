@@ -206,7 +206,7 @@ for(var i = 0; i < cards.length; i++){
     <script>
       var area,bg,dist;
       var database = firebase.database();
-      database.ref('user').once('value', function(snapshot) {
+      database.ref('secured').once('value', function(snapshot) {
         if (snapshot.exists()) {
           var content = '';
           snapshot.forEach(function(data) {

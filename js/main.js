@@ -10,34 +10,29 @@ var config = {
 firebase.initializeApp(config);
 
 var messagesRef = firebase.database().ref('user');
+var messagesRef2 = firebase.database().ref('secured');
 $('#donateForm').submit(function(e) {
     e.preventDefault();
  
     var newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        name: $('.fullname').val(),
+    var newMessageRef2 = messagesRef2.push();
+   newMessageRef2.set({
+       name: $('.fullname').val(),
         phone: $('.phone').val(),
+        email: $('.email').val(),
         district: $('.district').val(),
         area: $('.area').val(),
         address: $('.address').val(),
-       
+        age: $('.age').val(),
         bg: $('.bg').val(),
-       
+        covid: $('.covid').val(),
+        alcohol: $('.alcohol').val(),
         plasma: $('.plasma').val(),
-       
+        donate: $('.Donate').val(),
+        gender: $('.gender').val()
     });
- 
-    $('.success-message').show();
-  $('#main').hide();
-    $('#donateForm')[0].reset();
-});
-var messagesRef2 = firebase.database().ref('secured_info');
-$('#donateForm').submit(function(e) {
-    
- 
-    var newMessageRef2 = messagesRef2.push();
-    newMessageRef2.set({
-        name: $('.fullname').val(),
+    newMessageRef.set({
+       name: $('.fullname').val(),
         phone: $('.phone').val(),
         email: $('.email').val(),
         district: $('.district').val(),
